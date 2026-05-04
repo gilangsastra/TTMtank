@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  /* Restrained, premium palette — no flashy gradients */
+  --color-paper: #faf8f4;       /* warm off-white background */
+  --color-ink: #0e1216;          /* near-black text */
+  --color-ink-soft: #4a5159;     /* secondary text */
+  --color-line: #e7e2d8;         /* subtle borders on paper */
+  --color-accent: #1f3a4d;       /* deep teal — water, trust */
+  --color-accent-soft: #eef2f5;  /* accent tint for surfaces */
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+html, body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tighter heading rhythm — premium feel */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+}
